@@ -11,7 +11,7 @@ const logTime = (fn, name = fn.name) => {
 const method = (fn) => {
   const tasks = [];
   for (let i = 0; i < 1000; i++) {
-    tasks.push(fn('find', ['tmp', '-iname', '*.js'], { stdio: 'inherit' }));
+    tasks.push(fn('find', ['/tmp', '-iname', '*.js'], { stdio: 'inherit' }));
   }
   return Promise.all(tasks);
 }
